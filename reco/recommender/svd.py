@@ -90,12 +90,12 @@ class SVDRecommender:
         userField = formatizer['user']
         valueField = formatizer['value']
 
-        userList = data.ix[:,userField].tolist()
-        itemList = data.ix[:,itemField].tolist()
-        valueList = data.ix[:,valueField].tolist()
+        userList = data.iloc[:,userField].tolist()
+        itemList = data.iloc[:,itemField].tolist()
+        valueList = data.iloc[:,valueField].tolist()
 
-        users = list(set(data.ix[:,userField]))
-        items = list(set(data.ix[:,itemField]))
+        users = list(set(data.iloc[:,userField]))
+        items = list(set(data.iloc[:,itemField]))
 
         users_index = {users[i]: i for i in range(len(users))}
 
