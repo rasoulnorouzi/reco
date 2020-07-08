@@ -190,8 +190,8 @@ class SVDRecommender:
                  pair in each row of X.
         """
 
-        users = X.ix[:,formatizer['user']].tolist()
-        items = X.ix[:,formatizer['item']].tolist()
+        users = X.iloc[:,formatizer['user']].tolist()
+        items = X.iloc[:,formatizer['item']].tolist()
 
         if self.method == 'default':
 
